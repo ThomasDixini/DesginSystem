@@ -118,36 +118,14 @@ var {
   }
 });
 
-// src/index.tsx
-import { jsx } from "react/jsx-runtime";
-var Button = styled("button", {
-  background: "$ignite500",
+// src/components/Box.ts
+var Box = styled("div", {
+  padding: "$4",
   borderRadius: "$md",
   color: "$white",
-  display: "flex",
-  border: 0,
-  alignItems: "center",
-  justifyContent: "center",
-  variants: {
-    size: {
-      small: {
-        fontSize: 14,
-        padding: "$2 $4"
-      },
-      big: {
-        fontSize: 16,
-        padding: "$3 $6"
-      }
-    }
-  },
-  defaultVariants: {
-    size: "small"
-  }
+  backgroundColor: "$gray800",
+  border: "1px solid $gray600"
 });
-function App() {
-  return /* @__PURE__ */ jsx(Button, { children: "Hello world" });
-}
 export {
-  App,
-  Button
+  Box
 };

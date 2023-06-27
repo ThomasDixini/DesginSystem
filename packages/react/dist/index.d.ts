@@ -1,12 +1,8 @@
-import * as react_jsx_runtime from 'react/jsx-runtime';
 import * as _stitches_react_types_styled_component from '@stitches/react/types/styled-component';
 import * as _stitches_react_types_css_util from '@stitches/react/types/css-util';
 import { ComponentProps } from 'react';
 
-type ButtonProps = ComponentProps<typeof Button>;
-declare const Button: _stitches_react_types_styled_component.StyledComponent<"button", {
-    size?: "big" | "small" | undefined;
-}, {}, _stitches_react_types_css_util.CSS<{}, {
+declare const Box: _stitches_react_types_styled_component.StyledComponent<"div", {}, {}, _stitches_react_types_css_util.CSS<{}, {
     colors: {
         white: string;
         black: string;
@@ -208,6 +204,7 @@ declare const Button: _stitches_react_types_styled_component.StyledComponent<"bu
     transition: "transitions";
     zIndex: "zIndices";
 }, {}>>;
-declare function App(): react_jsx_runtime.JSX.Element;
+interface BoxProps extends ComponentProps<typeof Box> {
+}
 
-export { App, Button, ButtonProps };
+export { Box, BoxProps };

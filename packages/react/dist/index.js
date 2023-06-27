@@ -37,8 +37,7 @@ var __toCommonJS = (mod) => __copyProps(__defProp({}, "__esModule", { value: tru
 // src/index.tsx
 var src_exports = {};
 __export(src_exports, {
-  App: () => App,
-  Button: () => Button
+  Box: () => Box
 });
 module.exports = __toCommonJS(src_exports);
 
@@ -142,37 +141,15 @@ var {
   }
 });
 
-// src/index.tsx
-var import_jsx_runtime = require("react/jsx-runtime");
-var Button = styled("button", {
-  background: "$ignite500",
+// src/components/Box.ts
+var Box = styled("div", {
+  padding: "$4",
   borderRadius: "$md",
   color: "$white",
-  display: "flex",
-  border: 0,
-  alignItems: "center",
-  justifyContent: "center",
-  variants: {
-    size: {
-      small: {
-        fontSize: 14,
-        padding: "$2 $4"
-      },
-      big: {
-        fontSize: 16,
-        padding: "$3 $6"
-      }
-    }
-  },
-  defaultVariants: {
-    size: "small"
-  }
+  backgroundColor: "$gray800",
+  border: "1px solid $gray600"
 });
-function App() {
-  return /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Button, { children: "Hello world" });
-}
 // Annotate the CommonJS export names for ESM import in node:
 0 && (module.exports = {
-  App,
-  Button
+  Box
 });

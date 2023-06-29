@@ -151,7 +151,31 @@ var Text = styled("p", {
     }
   }
 });
+
+// src/components/Heading.tsx
+var Heading = styled("h2", {
+  margin: 0,
+  fontFamily: "$default",
+  lineHeight: "$shorter",
+  color: "$gray100",
+  variants: {
+    size: {
+      sm: { fontSize: "$xl" },
+      md: { fontSize: "$2xl" },
+      lg: { fontSize: "$3xl" },
+      xl: { fontSize: "$4xl" },
+      "2xl": { fontSize: "$5xl" },
+      "4xl": { fontSize: "$6xl" },
+      "5xl": { fontSize: "$7xl" },
+      "6xl": { fontSize: "$8xl" }
+    }
+  },
+  defaultVariants: {
+    size: "md"
+  }
+});
 export {
   Box,
+  Heading,
   Text
 };

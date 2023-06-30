@@ -49,6 +49,7 @@ var src_exports = {};
 __export(src_exports, {
   Avatar: () => Avatar2,
   Box: () => Box,
+  Button: () => Button,
   Heading: () => Heading,
   Text: () => Text
 });
@@ -244,10 +245,49 @@ function Avatar2(props) {
     /* @__PURE__ */ (0, import_jsx_runtime.jsx)(AvatarFallback, { delayMs: 600, children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(import_phosphor_react.User, {}) })
   ] });
 }
+
+// src/components/Button.tsx
+var Button = styled("button", {
+  all: "unset",
+  color: "$white",
+  fontWeight: "$bold",
+  borderRadius: "$md",
+  cursor: "pointer",
+  "&:not(:disabled):hover": {
+    background: "$ignite500"
+  },
+  "&:disabled": {
+    background: "$gray400"
+  },
+  variants: {
+    variant: {
+      primary: {
+        padding: "0 $8",
+        height: 46,
+        backgroundColor: "$ignite300"
+      },
+      secondary: {
+        padding: "0 $8",
+        height: 46,
+        border: "2px solid $ignite500",
+        color: "$ignite300"
+      },
+      tertiary: {
+        padding: "0 $8",
+        height: 46,
+        color: "$white"
+      }
+    }
+  },
+  defaultVariants: {
+    variant: "primary"
+  }
+});
 // Annotate the CommonJS export names for ESM import in node:
 0 && (module.exports = {
   Avatar,
   Box,
+  Button,
   Heading,
   Text
 });

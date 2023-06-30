@@ -64,6 +64,7 @@ __export(src_exports, {
   Button: () => Button,
   Checkbox: () => Checkbox2,
   Heading: () => Heading,
+  Multistep: () => Multistep,
   Text: () => Text,
   TextInput: () => TextInput
 });
@@ -407,6 +408,51 @@ var import_jsx_runtime3 = require("react/jsx-runtime");
 function Checkbox2(props) {
   return /* @__PURE__ */ (0, import_jsx_runtime3.jsx)(CheckboxContainer, __spreadProps(__spreadValues({}, props), { children: /* @__PURE__ */ (0, import_jsx_runtime3.jsx)(CheckboxIndicator, { children: /* @__PURE__ */ (0, import_jsx_runtime3.jsx)(import_phosphor_react2.Check, { weight: "bold" }) }) }));
 }
+
+// src/components/Multistep/styles.ts
+var MultistepContainer = styled("div", {
+  width: "100%"
+});
+var Label = styled(Text, {
+  color: "$gray200",
+  defaultVariants: {
+    size: "xs"
+  }
+});
+var Steps = styled("div", {
+  display: "grid",
+  gridTemplateColumns: "repeat(var(--step-size), 1fr)",
+  gap: "$2",
+  marginTop: "$1"
+});
+var Step = styled("div", {
+  height: "$1",
+  backgroundColor: "$gray600",
+  borderRadius: "$px",
+  variants: {
+    active: {
+      true: {
+        background: "$gray100"
+      }
+    }
+  }
+});
+
+// src/components/Multistep/Multistep.tsx
+var import_jsx_runtime4 = require("react/jsx-runtime");
+function Multistep({ size, currentStep }) {
+  return /* @__PURE__ */ (0, import_jsx_runtime4.jsxs)(MultistepContainer, { children: [
+    /* @__PURE__ */ (0, import_jsx_runtime4.jsxs)(Label, { children: [
+      "Passo ",
+      currentStep,
+      " de ",
+      size
+    ] }),
+    /* @__PURE__ */ (0, import_jsx_runtime4.jsx)(Steps, { css: { "--step-size": size }, children: Array.from({ length: size }, (_, i) => i + 1).map((step) => {
+      return /* @__PURE__ */ (0, import_jsx_runtime4.jsx)(Step, { active: currentStep >= step }, step);
+    }) })
+  ] });
+}
 // Annotate the CommonJS export names for ESM import in node:
 0 && (module.exports = {
   Avatar,
@@ -414,6 +460,7 @@ function Checkbox2(props) {
   Button,
   Checkbox,
   Heading,
+  Multistep,
   Text,
   TextInput
 });

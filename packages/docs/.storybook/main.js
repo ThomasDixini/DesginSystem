@@ -13,5 +13,12 @@ const config = {
   docs: {
     autodocs: "tag",
   },
+  viteFinal: (config, configVite) => {
+    if(configVite == 'PRODUCTION'){
+      config.base = '/DesginSystem/'
+    }
+
+    return config
+  }
 };
 export default config;

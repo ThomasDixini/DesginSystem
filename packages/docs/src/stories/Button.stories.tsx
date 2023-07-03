@@ -5,7 +5,12 @@ export default {
     title: 'Form/Button',
     component: Button,
     args: {
-        children: "Send"
+        children: "Send",
+    },
+    argTypes: {
+        onClick: {
+            action: 'click'
+        }
     }
 } as Meta<ButtonProps>
 
@@ -17,7 +22,6 @@ export const Secondary: StoryObj<ButtonProps> = {
         children: 'Create new'
     }
 }
-
 export const Tertiary: StoryObj<ButtonProps> = {
     args: {
         variant: 'tertiary',

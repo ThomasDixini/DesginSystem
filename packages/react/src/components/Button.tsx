@@ -22,8 +22,6 @@ export const Button = styled('button', {
                 padding: '0 $8',
                 height: 46,
                 backgroundColor: '$ignite300',
-
-                
             },
             secondary: {
                 padding: '0 $8',

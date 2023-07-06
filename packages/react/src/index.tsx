@@ -6,3 +6,5 @@ export * from './components/Button'
 export * from './components/TextInput/TextInput'
 export * from './components/Checkbox/Checkbox'
 export * from './components/Multistep/Multistep'
+
+export * from './styles'

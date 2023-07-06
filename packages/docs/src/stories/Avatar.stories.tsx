@@ -1,5 +1,5 @@
-import type { StoryObj, Meta } from '@storybook/react'
-import { Avatar, AvatarProps } from '@ignite-ui/react'
+import { StoryObj, Meta } from '@storybook/react'
+import { Avatar, AvatarProps } from '@thomas-ignite-ui/react'
 
 export default {
     title: 'Data User/Avatar',
@@ -17,4 +17,6 @@ export const WithFallback: StoryObj<AvatarProps> = {
         src: undefined,
     }
 }
+
+
 

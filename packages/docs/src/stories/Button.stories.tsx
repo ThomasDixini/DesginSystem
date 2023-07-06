@@ -1,5 +1,6 @@
 import type { StoryObj, Meta } from '@storybook/react'
-import { Button, ButtonProps } from '@ignite-ui/react'
+import { Canvas } from '@storybook/blocks'
+import { Button, ButtonProps } from '@thomas-ignite-ui/react'
 
 export default {
     title: 'Form/Button',
@@ -14,7 +15,13 @@ export default {
     }
 } as Meta<ButtonProps>
 
-export const Primary: StoryObj<ButtonProps> = {}
+export const Primary: StoryObj<ButtonProps> = {
+    parameters: {
+        docs: {
+            canvas: { sourceState: 'shown' }
+        }
+    }
+}
 
 export const Secondary: StoryObj<ButtonProps> = {
     args: {
@@ -29,3 +36,5 @@ export const Tertiary: StoryObj<ButtonProps> = {
         disabled: true
     }
 }
+
+
